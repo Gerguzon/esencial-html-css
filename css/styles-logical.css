@@ -1,0 +1,413 @@
+/* @font-face {
+    font-family: charter ;
+    src: url('../fonts/charter-regular.otf') ;
+    font-style: normal ;
+    font-weight: 400 ;
+}
+
+@font-face {
+    font-family: charter ; 
+
+@font-face {
+    font-family: charter ;
+    src: url('../fonts/charter-bold-italic.otf') ;
+    font-style: italic ;
+    font-weight: bold;
+} */
+
+
+/* por defecto el html tiene como tamamño de font 16 px */
+
+
+:root {
+    font-size: 16px;
+    --gray-30: #251F24;
+    --gray-20:#251F24;
+    --grey-10: #A5A3A5;
+   
+
+   --blue: #157EFB;
+    --gray: #3A3539;
+    --white: #ffffff;
+    --grey-soft:#61616133;
+
+}
+
+.debug {
+    border: 1px solid red;
+}
+
+/* variables*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+ background-color: var(--gray-30);
+ color: var(--grey-10);  
+ font-family: 'Nunito', sans-serif;
+ margin: 0;
+}
+
+main {
+    position: relative;   
+    margin-block-end: 80px; 
+}
+
+
+.wrapper {
+    max-inline-size: 902px;
+    margin: auto;
+}
+
+.main-content {
+    padding-inline: 16px;
+}
+
+.hero {
+    block-size: 100px;
+    inline-size: 100%;
+    background: linear-gradient(96.07deg, #314755 30.63%, #26A0DA 102.18%);
+}
+
+
+
+a {
+    color: var(--gray-30) ;
+}
+ 
+.header { 
+    
+    /* position: sticky;
+    top: 0; */
+    z-index: 1;
+}
+
+
+.header-content {
+    padding-inline-start: 16px;
+    /* position: relative; */
+}
+
+header {
+    margin-block-start: 24px;
+    /* position: absolute; */
+    inline-size: 188px;
+    /* inset-block-start: 60px;
+    inset-inline-start: -235px; */
+    font-size: 14px;
+   
+}
+
+header a {
+    color: var(--grey-10);
+    text-decoration: none;
+    /* underline como valor para subrallar un texto */
+}
+
+header a:hover {
+    color: var(--red);
+    cursor: pointer;
+}
+
+header li {
+    margin-bottom: 16px;
+}
+
+nav details summary {
+    font-weight: bold;
+    color: var(--white);
+}
+
+nav details summary:hover {
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 60px;
+    margin-block-start: 64px ;
+    margin-block-end: 16px;
+    color: var(--white);
+}
+
+h1 + p {
+    margin-block-end: 64px;
+}
+
+
+p {
+    font-size: 1rem;
+    
+}
+
+h2 {
+    font-size: 32px ;
+    margin-block: 40px ;
+    font-weight: normal ;
+    color: var(--white);
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    counter-increment: titleList;
+    margin-block: 16px;
+    padding-block-end: 8px;
+    position: relative;
+    color: var(--white);
+    
+
+}
+
+
+
+
+
+.section-content img {
+    display: block;
+    margin-block-start: 40px;
+}
+
+section + hr {
+    display: none;
+}
+
+section {
+    margin-block-end: 80px;
+
+}
+
+hr {
+    margin-block-end: 40px;
+    border: 2px solid var(--grey-soft);
+    
+    
+}
+
+
+
+.section-content h3::before{
+ content: counter(titleList,decimal) '. ';
+
+ 
+}
+
+.section-content h3::after {
+    display: inline-block;
+    content: '';
+    inline-size: 90px;
+    block-size: 4px;
+    background-color: var(--gray-30);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+
+pre {
+    background-color: var(--gray);
+    padding: 40px;
+    font-family: Roboto;
+    border-radius: 8px;
+    overflow: auto;
+}
+
+blockquote {
+    
+    margin-block-start: 80px ;
+    margin-block-end: 63px;
+    margin-inline: 0px;
+    line-height: 24px;
+    padding: 24px;
+    font-size: 24px;
+    border-left: 4px solid var(--gray-20);
+    background-color: var(--gray);
+    color: var(--white);
+    border-radius: 8px;
+}
+
+blockquote span {
+    color: var(--grey-10);
+    color: var(--white);
+}
+
+blockquote span::before{
+    content: '- ';
+}
+
+.section-2 img {
+    inline-size: 100%;
+}
+
+
+
+
+.section-3 ol li {
+    line-height: 24px;
+   
+}
+
+.section-3 ul li {
+    margin-block-end: 16px;
+}
+
+.section-3 img {
+    margin-block-end: 73px;
+    inline-size: 100%;
+
+}
+
+
+
+/* slider */
+
+
+.slider {
+    /* border: 1px solid red; */
+}
+
+.slider-container {
+    /* block-size: 100px; */
+    display: block;
+    overflow: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+
+.slider-slide {
+    /* border: 1px solid  yellow; */
+    
+}   
+
+.video {
+    display: inline-block;
+    inline-size: 100%;
+    block-size: auto;
+    aspect-ratio: 16/9;
+    margin: 0;
+    /* border: 1px solid var(--white);  */
+
+}
+
+.slider-bullet-list {
+    margin-block-start: 16px;
+    text-align: center;
+    /* border: 1px solid orange; */
+}
+
+.slider-bullet-list a {
+    color: var(--gray-20);
+    text-decoration: none;
+    display: inline-block;
+    inline-size: 20px;
+    block-size: 20px;
+    background-color: var(--white);
+    border-radius: 50%;
+}
+
+/* form */
+
+.form {
+    margin-block-start: 40px;
+    
+    
+}
+
+.form div {
+    max-inline-size: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.form input {
+    inline-size: 100%;
+    block-size: 48px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    background-color: var(--gray-20);
+    border: 2px solid var(--white);
+    padding-inline-start: 16px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: var(--white);
+}
+
+.form input::placeholder {
+    color: var(--white);
+}
+
+.form input[type="submit"] {
+    inline-size: 100%;
+    box-sizing: border-box;
+    block-size: 48px;
+    background-color: var(--blue);
+    color: var(--white);
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+}
+
+p a {
+    color: var(--blue) ;
+}
+
+
+footer {
+    block-size: 174px;
+    background-color: var(--white);
+    padding-block-start:  48px;
+    padding-inline: 16px ;
+   
+}
+
+
+
+.footer-content {
+    max-inline-size: 400px;
+    block-size: 38px;  
+    margin: auto; 
+   
+}
+
+
+footer p {
+    color: var(--gray-30);
+    font-size: 32px;
+    text-align: center;
+}
+
+
+@media screen and (min-width: 1366px) {
+    .hero {
+        block-size: 350px;
+    }
+
+    .header { 
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+    
+    
+    .header-content {
+        position: relative;
+    }
+    
+    header {
+        position: absolute;
+        inline-size: 188px;
+        inset-block-start: 60px;
+        inset-inline-start: -235px;
+        
+       
+    }
+}
